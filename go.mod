@@ -1,4 +1,4 @@
-module github.com/ganievs/gitlab4
+module github.com/ganievs/gitlabv4
 
 go 1.20
 
