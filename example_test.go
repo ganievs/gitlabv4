@@ -1,4 +1,4 @@
-package githubv4_test
+package gitlabv4_test
 
 import (
 	"context"
@@ -7,17 +7,17 @@ import (
 	"os"
 	"time"
 
-	"github.com/shurcooL/githubv4"
+	"github.com/ganievs/gitlabv4"
 	"golang.org/x/oauth2"
 )
 
 func Example() {
 	src := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
+		&oauth2.Token{AccessToken: os.Getenv("GITLAB_TOKEN")},
 	)
 	httpClient := oauth2.NewClient(context.Background(), src)
 
-	client := githubv4.NewClient(httpClient)
+	client := gitlabv4.NewClient(httpClient)
 
 	var q struct {
 		Viewer struct {

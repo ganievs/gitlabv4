@@ -1,4 +1,4 @@
-package githubv4
+package gitlabv4
 
 import (
 	"context"
